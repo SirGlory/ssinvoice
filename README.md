@@ -3,6 +3,6 @@
 Description: 
 Technical Assesment - Invoice generator with integrated currency conversion
 
-Limiitaions:
+Current Issues/Limitations:
 Range of currencies
 UI
