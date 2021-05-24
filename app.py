@@ -32,7 +32,7 @@ def pdfgen():
     name_1 = invoice_form.name1.data
     company = invoice_form.company.data
     currency_1 = invoice_form.currency1.data
-    name_2 = invoice_form.address.data
+    name_2 = invoice_form.name2.data
     address = invoice_form.address.data
     currency_2 = invoice_form.currency2.data
 
