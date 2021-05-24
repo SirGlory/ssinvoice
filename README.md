@@ -1,7 +1,7 @@
 # ssinvoice
 
 Description: 
-Technical Assesment - Invoice generator with integrated currency conversion
+Technical Assessment - Invoice generator with integrated currency conversion
 
 Current Issues/Limitations:
 Range of currencies
