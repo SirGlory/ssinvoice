@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form, render_field, render_form_row %}
+{% block content %}
+
+<div class="container">
+  <div class="row text-center">
+    <div class="text-primary font-weight-bolder col-sm-12  mb-2"><h1>SweepSouth - Tools</h1></div>
+    <div class="font-weight-bold col-sm-12 mb-4"><h4>Generate invoices in your local currency</h4></div>
+  </div>
+    <div class="container">
+      <form action="/invoice" method="post" novalidate>
+          {{ form.hidden_tag() }}
+        <div class="row">
+          <p>
+              {{ form.name1.label }}<br>
+              {{ form.name1(size=32) }}
+          </p>
+          <p>
+              {{ form.company.label }}<br>
+              {{ form.company(size=32) }}
+          </p>
+          <p>{{ form.currency1.label }}<br>
+            {{ form.currency1 }}
+          </p>
+        </div>
+        <div class="row">
+          <p>
+              {{ form.name2.label }}<br>
+              {{ form.name2(size=32) }}
+          </p>
+          <p>
+              {{ form.address.label }}<br>
+              {{ form.address(size=32) }}
+          </p>
+          <p>{{ form.currency2.label }}<br>
+            {{ form.currency2 }}
+          </p>
+        </div>
+        <div class="row">
+          <p>
+              {{ form.item1.label }}<br>
+              {{ form.item1(size=32) }}
+          </p>
+          <p>
+              {{ form.quantity1.label }}<br>
+              {{ form.quantity1(size=32) }}
+          </p>
+          <p>
+              {{ form.price1.label }}<br>
+              {{ form.price1(size=32) }}
+          </p>
+        </div>
+        <div class="row">
+          <p>
+              {{ form.item2.label }}<br>
+              {{ form.item2(size=32) }}
+          </p>
+          <p>
+              {{ form.quantity2.label }}<br>
+              {{ form.quantity2(size=32) }}
+          </p>
+          <p>
+              {{ form.price2.label }}<br>
+              {{ form.price2(size=32) }}
+          </p>
+        </div>
+        <div class="row">
+          <p>
+              {{ form.item3.label }}<br>
+              {{ form.item3(size=32) }}
+          </p>
+          <p>
+              {{ form.quantity3.label }}<br>
+              {{ form.quantity3(size=32) }}
+          </p>
+          <p>
+              {{ form.price3.label }}<br>
+              {{ form.price3(size=32) }}
+          </p>
+          </div>
+          <div><p>{{ form.submit() }}</p></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+</body>
+</html>
