@@ -79,12 +79,15 @@ class PdfReport:
         pdf.cell(w=50, h=40, txt=str(invoice.currency2), border="T", align="L")
 
 
+
         # Change directory
-        os.chdir("pdfs")
+        #os.chdir("templates")
+
         # Ouput PDF
         pdf.output(self.filename)
+
         # Auto open in windows
-        webbrowser.open(self.filename)
+        #webbrowser.open(self.filename)
 
 
 class FileSharer:

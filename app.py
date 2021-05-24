@@ -47,9 +47,6 @@ def pdfgen():
     description_3 = invoice_form.item3.data
     quantity_3 = int(invoice_form.quantity3.data)
     price_3 = float(invoice_form.price3.data)
-    print(description_1)
-    print(quantity_1)
-    print(price_1)
 
     # Calculate and convert total
     total = quantity_1*price_1 + quantity_2*price_2 + quantity_3*price_3
@@ -63,12 +60,11 @@ def pdfgen():
     item_3 = Item(description=description_3,quantity=quantity_3,  price=price_3)
 
     # Generate PDF
-    pdf_report = PdfReport(filename=f"Invoice_{the_invoice.date}_{the_invoice.name_2}.pdf")
+    pdf_report = PdfReport(filename="Invoice.pdf")
     pdf_report.generate(item_1=item_1, item_2=item_2, item_3=item_3, invoice=the_invoice)
 
     # Share file on Cloud
     file_sharer = FileSharer(filepath=pdf_report.filename)
-    print(file_sharer.share())
     return redirect(file_sharer.share())
 
 
